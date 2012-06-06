@@ -5,15 +5,16 @@ use Test::More;
 
 BEGIN { use_ok 'KataRomanNumerals::RomanNumeralsII'}
 
+my $roman = KataRomanNumerals::RomanNumeralsII::find_roman_numberII(1);
+is( $roman, 'I', '1 -> I');
 
-my $roman_1234 = KataRomanNumerals::RomanNumeralsII::find_roman_numberII(1234);
-is( $roman_1234, 'MCCXXXIV', 'got expected value');
+$roman = KataRomanNumerals::RomanNumeralsII::find_roman_numberII(4);
+is( $roman, "IV", '4 -> II');
 
-my $roman_1 = KataRomanNumerals::RomanNumeralsII::find_roman_numberII(1);
-is( $roman_1, 'I', 'got expected value');
-my $roman_5 = KataRomanNumerals::RomanNumeralsII::find_roman_numberII(5);
-is( $roman_5, 'V', 'got expected value');
-my $roman_9 = KataRomanNumerals::RomanNumeralsII::find_roman_numberII(9);
-is( $roman_9, 'IX', 'got expected value');
+$roman = KataRomanNumerals::RomanNumeralsII::find_roman_numberII(5);
+is( $roman, 'V', '5 -> V');
+
+# my $roman_9 = KataRomanNumerals::RomanNumeralsII::find_roman_numberII(9);
+# is( $roman_9, 'IX', 'got expected value');
 
 done_testing();
