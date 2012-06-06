@@ -41,9 +41,12 @@ if you don't export anything, such as for a purely object-oriented module.
 
 sub find_roman_numberII{
     my $number = shift;
-    ( $number <= 3 )?
-        return 'I' x $number:
-        return 'can not convert number';
+    if( $number <= 3 ){
+        return 'I' x $number;
+    }else{
+        return ('I' x (5-$number)).'V';
+    }
+
 
 }
 =head2 function2
