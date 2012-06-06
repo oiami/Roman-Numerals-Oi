@@ -41,12 +41,14 @@ if you don't export anything, such as for a purely object-oriented module.
 
 sub find_roman_numberII{
     my $number = shift;
-    if( $number <= 3 ){
+    if ( $number <= 3 ) {
         return 'I' x $number;
-    }elsif ( $number < 9) {
-        return ('I' x (5 - $number) ).'V'.find_roman_numberII($number-5);
-    }else{
+    } elsif ( $number < 9 ) {
+        return ('I' x (5 - $number) ).'V'.find_roman_numberII( $number - 5 );
+    } elsif ( $number < 11 ) {
         return ('I' x (10 - $number) ).'X';
+    } else {
+        return 'X'.find_roman_numberII( $number - 10 );
     }
 
 
