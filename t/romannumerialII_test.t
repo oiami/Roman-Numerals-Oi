@@ -14,4 +14,7 @@ is( $roman, 'IV', '4 -> IV');
 $roman = my $roman = KataRomanNumerals::RomanNumeralsII::find_roman_numberII(6);
 is( $roman, 'VI', '6 -> VI');
 
+$roman = my $roman = KataRomanNumerals::RomanNumeralsII::find_roman_numberII(9);
+is( $roman, 'IX', '9 -> IX');
+
 done_testing();
