@@ -43,8 +43,10 @@ sub find_roman_numberII{
     my $number = shift;
     if( $number <= 3 ){
         return 'I' x $number;
+    }elsif ( $number < 5) {
+        return ('I' x (5 - $number) ).'V';
     }else{
-        return ('I' x (5-$number)).'V';
+        return 'V'.('I' x ($number - 5));
     }
 
 
